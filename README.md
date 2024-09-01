@@ -4,40 +4,11 @@ This project is designed to process image data from CSV files efficiently. It va
 
 ## Table of Contents
 
-- [Folder Structure](#folder-structure)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
-- [Environment Variables](#environment-variables)
 - [Running the Application](#running-the-application)
 - [API Endpoints](#api-endpoints)
 - [How to Test](#how-to-test)
-- [Additional Information](#additional-information)
-
-## Folder Structure
-
-Api_Processing/
-│
-├── controllers/
-│ └── imageController.js # Handles image processing logic
-│
-├── models/
-│ └── imageModel.js # Defines the database schema for storing images and their status
-│
-├── routes/
-│ └── imageRoutes.js # Defines API routes for image processing
-│
-├── jobs/
-│ └── imageJob.js # Contains asynchronous jobs for image processing
-│
-├── config/
-│ ├── db.js # Database configuration
-│ ├── redis.js # Redis configuration for queue management
-│ └── queue.js # Queue configuration for processing tasks
-│
-├── result/
-│ └── (output files will be placed here) # Directory for storing processed output files
-│
-└── index.js # Entry point of the application
 
 ## Prerequisites
 
@@ -91,3 +62,29 @@ Start index.js
 ```bash
 node index.js
 ```
+
+## API Endpoints
+
+Upload API: Accepts CSV files, validates them, and returns a unique request ID.
+
+```bash
+POST api/images/upload
+```
+
+Status API: Allows users to query the processing status using the request ID.
+
+```bash
+GET api/images/status/:requestId
+```
+
+Webhook API: This endpoint handles callbacks from the image processing service once all
+images have been processed
+
+```bash
+POST /webhook
+```
+
+## How to Test
+
+- Use Postman for testing.
+- A Postman collection is available in the repository for testing purposes.
