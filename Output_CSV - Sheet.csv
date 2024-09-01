@@ -1,0 +1,5 @@
+S. No.,Product Name,Input Image Urls,Output Image Urls
+1,SKU1,"https://via.placeholder.com/150,https://via.placeholder.com/200"," 'http://localhost:3000/output/SKU1-6977d9ff-0f11-4a17-839d-c23fdaf2bbb7-compressed-0.jpg',
+  'http://localhost:3000/output/SKU1-6977d9ff-0f11-4a17-839d-c23fdaf2bbb7-compressed-1.jpg'"
+2,SKU2,"https://via.placeholder.com/300,https://images.unsplash.com/photo-1593642634443-44adaa06623a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60","http://localhost:3000/output/SKU2-6977d9ff-0f11-4a17-839d-c23fdaf2bbb7-compressed-0.jpg',
+  'http://localhost:3000/output/SKU2-6977d9ff-0f11-4a17-839d-c23fdaf2bbb7-compressed-1.jpg'"
